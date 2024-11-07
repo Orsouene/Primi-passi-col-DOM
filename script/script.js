@@ -1,18 +1,15 @@
 // Chiamare l'img e il buttone con i loro ID
 const lampadinaSpenta = document.getElementById("spenta");
 const buttoneAccendere = document.getElementById("accendere");
+console.log(buttoneAccendere);
+
 // la function per scambiare l'img al momento del click
 function accendiSpegni() {
-  if (
-    lampadinaSpenta.src.includes("white_lamp.png") &&
-    (document.getElementById("accendere").innerHTML = "Accendi")
-  ) {
+  if (lampadinaSpenta.src.includes("white_lamp.png") && buttoneAccendere) {
     lampadinaSpenta.src = "./img/yellow_lamp.png";
-    document.getElementById("accendere").innerHTML = "spegni";
-  } else if (
-    lampadinaSpenta.src.includes("yellow_lamp.png") &&
-    (document.getElementById("accendere").innerHTML = "spegni")
-  ) {
+
+    buttoneAccendere.innerHTML = "spegni";
+  } else {
     lampadinaSpenta.src = "./img/white_lamp.png";
     document.getElementById("accendere").innerHTML = "Accendi";
   }
